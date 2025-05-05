@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - SLT Comércio e Serviços</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00ffcc;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #000;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #00ffcc;
+    }
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .form-container button {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fale Conosco</h1>
+    <nav>
+      <a href="index.html">Início</a>
+    </nav>
+  </header>
+
+  <section class="form-container">
+    <h2>Envie uma mensagem</h2>
+    <form action="mailto:slt.comerciosevicos@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SLT Comércio e Serviços</p>
+  </footer>
+</body>
+</html>
