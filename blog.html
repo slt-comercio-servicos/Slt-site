@@ -3,52 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <title>Blog - SLT Comércio e Serviços</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
     body {
       background-color: #111;
       color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
+
     header {
       background-color: #00ffcc;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
       color: #000;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    header h1 { margin-bottom: 10px; }
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
+      text-decoration: none;
       color: #000;
       font-weight: bold;
-      text-decoration: none;
     }
-    .blog-container {
-      max-width: 900px;
+
+    .container {
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 0 20px;
     }
+
     .post {
       background-color: #222;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       padding: 20px;
       border-left: 5px solid #00ffcc;
       border-radius: 8px;
+      transition: transform 0.2s ease;
     }
+
+    .post:hover {
+      transform: scale(1.01);
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
     .post h2 {
       color: #00ffcc;
       margin-bottom: 10px;
     }
-    .post p {
-      line-height: 1.6;
+
+    .categoria {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 10px;
     }
+
+    .btn-leia {
+      display: inline-block;
+      background-color: #00ffcc;
+      color: #000;
+      padding: 8px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
-      padding: 15px;
       background-color: #222;
+      padding: 20px;
+      margin-top: 40px;
       font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .post {
+        padding: 15px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -57,28 +102,38 @@
     <h1>Blog SLT</h1>
     <nav>
       <a href="index.html">Início</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <div class="blog-container">
+  <div class="container">
     <div class="post">
+      <img src="https://source.unsplash.com/800x400/?garden" alt="Jardinagem">
+      <div class="categoria">Categoria: Jardinagem</div>
       <h2>Dicas para manter o jardim limpo e saudável</h2>
       <p>Regue nas horas certas, remova folhas secas e adube a cada 15 dias. Um jardim bem cuidado traz beleza e bem-estar ao ambiente.</p>
+      <a class="btn-leia" href="#">Leia mais</a>
     </div>
 
     <div class="post">
+      <img src="https://source.unsplash.com/800x400/?pest-control" alt="Fumigação">
+      <div class="categoria">Categoria: Fumigação</div>
       <h2>Importância da fumigação preventiva</h2>
       <p>Fazer fumigação regularmente evita infestações perigosas e mantém a saúde da sua família ou equipe protegida.</p>
+      <a class="btn-leia" href="#">Leia mais</a>
     </div>
 
     <div class="post">
+      <img src="https://source.unsplash.com/800x400/?cleaning" alt="Limpeza">
+      <div class="categoria">Categoria: Limpeza</div>
       <h2>Limpeza profissional: quando contratar?</h2>
       <p>Ambientes com tráfego intenso precisam de limpeza técnica semanal. Saiba quando é hora de chamar uma empresa especializada.</p>
+      <a class="btn-leia" href="#">Leia mais</a>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 SLT Comércio e Serviços</p>
+    <p>&copy; 2025 SLT Comércio e Serviços. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
