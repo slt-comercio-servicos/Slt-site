@@ -1,161 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SLT Comércio e Serviços</title>
+  <title>Blog SLT - Comércio e Serviços</title>
   <style>
-    * {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: url('https://images.unsplash.com/photo-1581579185169-02aeb5f6e3c3?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
     }
     header {
-      background-color: rgba(0,0,0,0.7);
+      background-color: #00aa88;
+      color: white;
       padding: 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5em;
-      color: #00ffcc;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      background-color: rgba(0,0,0,0.6);
-      margin: 40px auto;
-      padding: 30px;
+    .container {
       max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    section h2 {
-      color: #00ffcc;
-      margin-bottom: 15px;
+    h2 {
+      color: #00aa88;
     }
-    .servicos ul {
-      list-style: none;
+    .post {
+      margin-bottom: 30px;
     }
-    .servicos li::before {
-      content: '✔';
-      margin-right: 10px;
-      color: #00ffcc;
+    .post h3 {
+      margin: 10px 0;
+      color: #00725f;
     }
-    .btn-whatsapp {
+    .post p {
+      color: #555;
+    }
+    .post a {
       display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    form label {
-      display: block;
       margin-top: 10px;
+      color: #00aa88;
+      text-decoration: none;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 5px;
-    }
-    form button {
-      margin-top: 15px;
-      background-color: #25d366;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      background-color: rgba(0,0,0,0.8);
-      padding: 15px;
-      font-size: 0.9em;
+    .post a:hover {
+      text-decoration: underline;
     }
   </style>
-  <script>
-    function enviarParaWhatsApp() {
-      const nome = document.getElementById('nome').value;
-      const telefone = document.getElementById('telefone').value;
-      const servico = document.getElementById('servico').value;
-      const mensagem = document.getElementById('mensagem').value;
-      const texto = `Olá, meu nome é ${nome}. Telefone: ${telefone}. Estou interessado em: ${servico}. Mensagem: ${mensagem}`;
-      const url = `https://wa.me/258875800291?text=${encodeURIComponent(texto)}`;
-      window.open(url, '_blank');
-    }
-  </script>
 </head>
 <body>
   <header>
-    <h1>SLT Comércio e Serviços</h1>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+    <h1>Blog SLT Comércio e Serviços</h1>
+    <p>Dicas, novidades e cuidados com sua casa e jardim</p>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Somos uma empresa especializada em serviços de limpeza geral, fumigação, desratização e jardinagem. Atendemos com profissionalismo e compromisso na cidade de Maputo.</p>
-  </section>
+  <div class="container">
+    <div class="post">
+      <h3><a href="post1-jardim.html">Como manter seu jardim sempre verde</a></h3>
+      <p>Dicas de jardinagem para deixar o seu espaço sempre bonito, saudável e bem cuidado.</p>
+    </div>
 
-  <section id="servicos" class="servicos">
-    <h2>Nossos Serviços</h2>
-    <ul>
-      <li>Limpeza geral</li>
-      <li>Fumigação de ambientes</li>
-      <li>Desratização</li>
-      <li>Jardinagem e manutenção de áreas verdes</li>
-    </ul>
-  </section>
+    <div class="post">
+      <h3><a href="post2-limpeza.html">5 Erros Comuns na Limpeza de Casas</a></h3>
+      <p>Evite esses erros para manter sua casa sempre limpa e segura. Veja as dicas da SLT.</p>
+    </div>
 
-  <section id="contato">
-    <h2>Fale Conosco</h2>
-    <p>📞 WhatsApp: <a class="btn-whatsapp" href="https://wa.me/258875800291" target="_blank">Agendar via WhatsApp</a></p>
-    <p>📧 E-mail: <a href="mailto:slt.comerciosevicos@gmail.com" style="color: #00ffcc">slt.comerciosevicos@gmail.com</a></p>
-    <p>🌐 Facebook: <a href="https://facebook.com/sltcomercioservicos" target="_blank" style="color: #00ffcc">SLT COMÉRCIO SERVIÇOS</a></p>
-
-    <h3 style="margin-top:30px; color:#00ffcc;">Pedir Orçamento</h3>
-    <form onsubmit="event.preventDefault(); enviarParaWhatsApp();">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" required>
-
-      <label for="telefone">Telefone:</label>
-      <input type="text" id="telefone" required>
-
-      <label for="servico">Serviço desejado:</label>
-      <input type="text" id="servico" required>
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" rows="4" required></textarea>
-
-      <button type="submit">Enviar via WhatsApp</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 SLT Comércio e Serviços. Todos os direitos reservados.</p>
-  </footer>
+    <div class="post">
+      <h3><a href="post3-fumigacao.html">Como a Fumigação Protege Sua Família</a></h3>
+      <p>Descubra por que a fumigação é essencial para garantir a saúde e o bem-estar da sua casa.</p>
+    </div>
+  </div>
 </body>
 </html>
