@@ -111,23 +111,35 @@
     <a class="btn btn-whatsapp" href="https://wa.me/258875800291" target="_blank">WhatsApp</a>
     <a class="btn btn-facebook" href="https://www.facebook.com/profile.php?id=100087117771507" target="_blank">Facebook</a>
 
-    <h2>Pedido de Cotação</h2>
-    <form action="mailto:sltcomercioservicos@gmail.com" method="POST" enctype="text/plain">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required />
+   <form action="https://formspree.io/f/mqkrkpnr" method="POST">
+  <h2>Pedido de Cotação</h2>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" required><br><br>
 
-      <label for="telefone">Telefone/WhatsApp:</label>
-      <input type="text" id="telefone" name="telefone" required />
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
 
-      <label for="servico">Serviço desejado:</label>
-      <textarea id="servico" name="servico" rows="4" required></textarea>
+  <label for="telefone">Telefone ou WhatsApp:</label><br>
+  <input type="text" id="telefone" name="telefone"><br><br>
 
-      <button type="submit">Enviar Pedido</button>
-    </form>
-  </main>
+  <label for="servico">Serviço desejado:</label><br>
+  <select id="servico" name="servico" required>
+    <option value="">-- Selecione --</option>
+    <option value="Limpeza Geral">Limpeza Geral</option>
+    <option value="Fumigação / Desratização">Fumigação / Desratização</option>
+    <option value="Jardinagem">Jardinagem</option>
+    <option value="Lavagem a Seco">Lavagem a Seco</option>
+    <option value="Recrutamento Doméstico / Motoristas / Seguranças">Recrutamento</option>
+    <option value="Outro">Outro</option>
+  </select><br><br>
+
+  <label for="mensagem">Mensagem:</label><br>
+  <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+  <button type="submit">Enviar Pedido</button>
+</form>
+
 
   <footer>
     SLT Comércio e Serviços | Maputo - Moçambique<br />
