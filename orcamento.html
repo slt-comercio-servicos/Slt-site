@@ -1,1 +1,29 @@
-<a href="orcamento.html">Orçamento</a>
+
+<form action="https://formspree.io/f/mqkrkpnr" method="POST">
+  <h2>Pedido de Cotação</h2>
+
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="telefone">Telefone ou WhatsApp:</label><br>
+  <input type="text" id="telefone" name="telefone"><br><br>
+
+  <label for="servico">Serviço desejado:</label><br>
+  <select id="servico" name="servico" required>
+    <option value="">-- Selecione --</option>
+    <option value="Limpeza Geral">Limpeza Geral</option>
+    <option value="Fumigação / Desratização">Fumigação / Desratização</option>
+    <option value="Jardinagem">Jardinagem</option>
+    <option value="Lavagem a Seco">Lavagem a Seco</option>
+    <option value="Recrutamento Doméstico / Motoristas / Seguranças">Recrutamento</option>
+    <option value="Outro">Outro</option>
+  </select><br><br>
+
+  <label for="mensagem">Mensagem:</label><br>
+  <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+  <button type="submit">Enviar Pedido</button>
+</form>
